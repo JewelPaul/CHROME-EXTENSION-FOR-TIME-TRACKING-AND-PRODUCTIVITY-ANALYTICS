@@ -114,6 +114,16 @@ While the current version provides robust functionality for time tracking and pr
 
 The extension’s modular design allows for easy updates and feature additions while maintaining its core simplicity and effectiveness.
 
+# OUTPUT
+![Screenshot 2025-04-22 at 2 48 47 PM](https://github.com/user-attachments/assets/0253fb89-f7db-48af-9106-e9f12592e054)
+
+![Screenshot 2025-04-22 at 2 49 46 PM](https://github.com/user-attachments/assets/9df9c626-0a1b-4c95-b32d-0ce62397ca81)
+
+![Screenshot 2025-04-22 at 2 49 33 PM](https://github.com/user-attachments/assets/e4c92d5d-abd4-4fe3-bcfe-4a3425d17598)
+
+
+
+
 ---
 
 ### 👨‍💻 Developed By
