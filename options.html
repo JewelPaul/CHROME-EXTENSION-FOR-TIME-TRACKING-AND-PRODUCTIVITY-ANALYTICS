@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeTrack Pro - Options</title>
+  <link rel="stylesheet" href="css/options.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-clock"></i>
+        <h1>TimeTrack Pro</h1>
+      </div>
+      <p>Configure your productivity tracking settings</p>
+    </header>
+
+    <div class="options-container">
+      <div class="option-section">
+        <h2>Website Categories</h2>
+        <p>Classify websites as productive or unproductive to improve your productivity score.</p>
+
+        <div class="category-tabs">
+          <button class="tab-btn active" data-tab="productive">Productive</button>
+          <button class="tab-btn" data-tab="unproductive">Unproductive</button>
+          <button class="tab-btn" data-tab="recent">Recent Sites</button>
+        </div>
+
+        <div class="tab-content active" id="productive-tab">
+          <div class="category-list" id="productive-list">
+            <!-- Will be populated by JavaScript -->
+          </div>
+
+          <div class="add-site">
+            <input type="text" id="add-productive-input" placeholder="Add domain (e.g., github.com)">
+            <button id="add-productive-btn">Add</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="unproductive-tab">
+          <div class="category-list" id="unproductive-list">
+            <!-- Will be populated by JavaScript -->
+          </div>
+
+          <div class="add-site">
+            <input type="text" id="add-unproductive-input" placeholder="Add domain (e.g., facebook.com)">
+            <button id="add-unproductive-btn">Add</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="recent-tab">
+          <p class="tab-description">Quickly categorize your recently visited sites:</p>
+          <div class="recent-sites-list" id="recent-sites-list">
+            <!-- Will be populated by JavaScript -->
+          </div>
+          <p class="empty-message" id="no-recent-sites">No recent sites to display.</p>
+        </div>
+      </div>
+
+      <div class="option-section">
+        <h2>Data Management</h2>
+        <p>Manage your tracking data.</p>
+
+        <div class="data-actions">
+          <button id="reset-today-btn" class="danger-btn">Reset Today's Data</button>
+          <button id="reset-week-btn" class="danger-btn">Reset Weekly Data</button>
+          <button id="reset-all-btn" class="danger-btn">Reset All Data</button>
+        </div>
+        <p class="warning-text">Warning: Resetting data cannot be undone!</p>
+      </div>
+
+      <div class="option-section">
+        <h2>About TimeTrack Pro</h2>
+        <p>TimeTrack Pro helps you monitor your online activity and improve productivity.</p>
+
+        <div class="about-info">
+          <p><strong>Version:</strong> 1.0.0</p>
+          <p><strong>Developer:</strong> Jewel Gabriel Paul</p>
+          <p><strong>Contact:</strong> support@timetrackpro.com</p>
+        </div>
+
+        <div class="buttons">
+          <a href="dashboard.html" class="primary-btn">
+            <i class="fas fa-chart-bar"></i> Open Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 TimeTrack Pro. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

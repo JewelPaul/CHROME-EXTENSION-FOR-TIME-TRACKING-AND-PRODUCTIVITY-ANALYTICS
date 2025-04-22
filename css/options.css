@@ -1,0 +1,413 @@
+/* Options styles for TimeTrack Pro */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #2196F3;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+header p {
+  color: #666;
+}
+
+.options-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.option-section {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.option-section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.option-section p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.category-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  color: #2196F3;
+  border-bottom: 2px solid #2196F3;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-description {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Recent Sites List */
+.recent-sites-list {
+  margin-bottom: 20px;
+}
+
+.recent-site-item {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recent-site-item .site-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.recent-site-item .site-domain {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.recent-site-item .site-time {
+  color: #666;
+  font-weight: 500;
+}
+
+.recent-site-item .site-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.category-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.category-btn i {
+  margin-right: 5px;
+}
+
+.category-btn:hover {
+  opacity: 0.9;
+}
+
+.category-btn.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.productive-btn {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+  border: 1px solid #c8e6c9;
+}
+
+.productive-btn.active {
+  background-color: #c8e6c9;
+  border: 1px solid #4CAF50;
+}
+
+.neutral-btn {
+  background-color: #f5f5f5;
+  color: #9E9E9E;
+  border: 1px solid #e0e0e0;
+}
+
+.neutral-btn.active {
+  background-color: #e0e0e0;
+  border: 1px solid #9E9E9E;
+}
+
+.unproductive-btn {
+  background-color: #ffebee;
+  color: #F44336;
+  border: 1px solid #ffcdd2;
+}
+
+.unproductive-btn.active {
+  background-color: #ffcdd2;
+  border: 1px solid #F44336;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.category-list {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: none;
+  color: #F44336;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.empty-list {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.add-site {
+  display: flex;
+}
+
+.add-site input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.add-site button {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-site button:hover {
+  background-color: #1976D2;
+}
+
+.data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.danger-btn {
+  padding: 10px 15px;
+  background-color: white;
+  color: #F44336;
+  border: 1px solid #F44336;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.danger-btn:hover {
+  background-color: #F44336;
+  color: white;
+}
+
+.warning-text {
+  color: #F44336;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.about-info {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  margin-bottom: 10px;
+}
+
+.about-info p:last-child {
+  margin-bottom: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #1976D2;
+}
+
+.primary-btn i {
+  margin-right: 8px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Notification styles */
+.notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+  border-left: 4px solid #2196F3;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification.success {
+  border-left-color: #4CAF50;
+}
+
+.notification.error {
+  border-left-color: #F44336;
+}
+
+.notification p {
+  margin: 0;
+}
+
+.notification .close-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .data-actions {
+    flex-direction: column;
+  }
+
+  .notification {
+    min-width: auto;
+    width: calc(100% - 40px);
+  }
+}

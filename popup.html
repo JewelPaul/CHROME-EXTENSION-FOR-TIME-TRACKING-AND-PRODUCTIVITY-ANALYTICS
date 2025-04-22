@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeTrack Pro</title>
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-clock"></i> TimeTrack Pro</h1>
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Tracking</span>
+      </div>
+    </header>
+
+    <div class="summary-section">
+      <h2>Today's Summary</h2>
+      <div class="productivity-score">
+        <div class="score-circle">
+          <span id="productivity-score">0%</span>
+        </div>
+        <p>Productivity Score</p>
+      </div>
+
+      <div class="time-summary">
+        <div class="time-item">
+          <i class="fas fa-check-circle productive-icon"></i>
+          <div class="time-details">
+            <span id="productive-time">0m</span>
+            <p>Productive</p>
+          </div>
+        </div>
+        <div class="time-item">
+          <i class="fas fa-times-circle unproductive-icon"></i>
+          <div class="time-details">
+            <span id="unproductive-time">0m</span>
+            <p>Unproductive</p>
+          </div>
+        </div>
+        <div class="time-item">
+          <i class="fas fa-question-circle neutral-icon"></i>
+          <div class="time-details">
+            <span id="neutral-time">0m</span>
+            <p>Neutral</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-sites-section">
+      <h2>Top Sites Today</h2>
+      <div id="top-sites-list" class="sites-list">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <div class="buttons-section">
+      <button id="dashboard-btn" class="btn primary-btn">
+        <i class="fas fa-chart-bar"></i> Full Dashboard
+      </button>
+      <button id="settings-btn" class="btn secondary-btn">
+        <i class="fas fa-cog"></i> Settings
+      </button>
+    </div>
+
+    <div class="reset-section">
+      <button id="reset-btn" class="btn reset-btn">
+        <i class="fas fa-redo"></i> Reset Today's Data
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

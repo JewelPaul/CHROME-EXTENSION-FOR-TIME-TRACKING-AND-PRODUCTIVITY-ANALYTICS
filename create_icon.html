@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TimeTrack Pro Icon Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .icon-item {
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>TimeTrack Pro Icon Creator</h1>
+    <p>Right-click on each icon and select "Save image as..." to save it to your icons folder.</p>
+    
+    <div class="icon-container">
+        <div class="icon-item">
+            <h3>16x16</h3>
+            <canvas id="canvas16" width="16" height="16"></canvas>
+        </div>
+        
+        <div class="icon-item">
+            <h3>48x48</h3>
+            <canvas id="canvas48" width="48" height="48"></canvas>
+        </div>
+        
+        <div class="icon-item">
+            <h3>128x128</h3>
+            <canvas id="canvas128" width="128" height="128"></canvas>
+        </div>
+    </div>
+    
+    <script>
+        // Function to draw a clock icon
+        function drawClockIcon(ctx, size) {
+            const center = size / 2;
+            const radius = size / 2 * 0.9;
+            
+            // Background circle
+            ctx.beginPath();
+            ctx.arc(center, center, radius, 0, Math.PI * 2);
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#2196F3');
+            gradient.addColorStop(1, '#1565C0');
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            // Clock face
+            ctx.beginPath();
+            ctx.arc(center, center, radius * 0.85, 0, Math.PI * 2);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            
+            // Clock hands
+            // Hour hand
+            ctx.save();
+            ctx.translate(center, center);
+            ctx.rotate(Math.PI / 4);
+            ctx.fillStyle = '#1565C0';
+            ctx.fillRect(-size/40, -size/5, size/20, size/5);
+            ctx.restore();
+            
+            // Minute hand
+            ctx.save();
+            ctx.translate(center, center);
+            ctx.rotate(Math.PI / 1.5);
+            ctx.fillStyle = '#F44336';
+            ctx.fillRect(-size/60, -size/3, size/30, size/3);
+            ctx.restore();
+            
+            // Center dot
+            ctx.beginPath();
+            ctx.arc(center, center, size/15, 0, Math.PI * 2);
+            ctx.fillStyle = '#1565C0';
+            ctx.fill();
+            
+            // Clock ticks
+            for (let i = 0; i < 12; i++) {
+                ctx.save();
+                ctx.translate(center, center);
+                ctx.rotate(i * Math.PI / 6);
+                ctx.fillStyle = '#1565C0';
+                ctx.fillRect(-size/80, -radius * 0.9, size/40, size/15);
+                ctx.restore();
+            }
+            
+            // Productivity bar at the bottom
+            if (size >= 48) {
+                const barHeight = size / 10;
+                const barWidth = size / 5;
+                const barY = center + radius * 0.4;
+                
+                // Green bar
+                ctx.fillStyle = '#4CAF50';
+                ctx.fillRect(center - barWidth * 2, barY, barWidth, barHeight);
+                
+                // Yellow bar
+                ctx.fillStyle = '#FFC107';
+                ctx.fillRect(center - barWidth, barY, barWidth, barHeight);
+                
+                // Red bar
+                ctx.fillStyle = '#F44336';
+                ctx.fillRect(center, barY, barWidth, barHeight);
+                
+                // Gray bar
+                ctx.fillStyle = '#9E9E9E';
+                ctx.fillRect(center + barWidth, barY, barWidth, barHeight);
+            }
+        }
+        
+        // Draw icons
+        window.onload = function() {
+            const sizes = [16, 48, 128];
+            
+            sizes.forEach(size => {
+                const canvas = document.getElementById(`canvas${size}`);
+                const ctx = canvas.getContext('2d');
+                drawClockIcon(ctx, size);
+            });
+        };
+    </script>
+</body>
+</html>

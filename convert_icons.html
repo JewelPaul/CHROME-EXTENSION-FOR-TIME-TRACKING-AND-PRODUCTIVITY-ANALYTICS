@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert SVG to PNG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .icons-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .icon-item {
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>TimeTrack Pro Icon Generator</h1>
+  <p>This tool converts the SVG icon to PNG files of different sizes for the Chrome extension.</p>
+  
+  <div class="icons-container">
+    <div class="icon-item">
+      <h3>16x16</h3>
+      <canvas id="canvas16" width="16" height="16"></canvas>
+      <div>
+        <a id="download16" download="icon16.png" href="#">Download</a>
+      </div>
+    </div>
+    
+    <div class="icon-item">
+      <h3>48x48</h3>
+      <canvas id="canvas48" width="48" height="48"></canvas>
+      <div>
+        <a id="download48" download="icon48.png" href="#">Download</a>
+      </div>
+    </div>
+    
+    <div class="icon-item">
+      <h3>128x128</h3>
+      <canvas id="canvas128" width="128" height="128"></canvas>
+      <div>
+        <a id="download128" download="icon128.png" href="#">Download</a>
+      </div>
+    </div>
+  </div>
+  
+  <button id="generate">Generate Icons</button>
+  
+  <div class="output" id="output">
+    <p>Click "Generate Icons" to create the PNG files.</p>
+  </div>
+  
+  <script>
+    document.getElementById('generate').addEventListener('click', function() {
+      const svgContent = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866666 33.866668"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Background Circle -->
+    <circle
+       style="fill:url(#gradient);fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="15.875" />
+    
+    <!-- Clock Face -->
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="13.229167" />
+    
+    <!-- Clock Ticks -->
+    <rect
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="1.0583333"
+       height="2.6458333"
+       x="16.404167"
+       y="5.2916665" />
+    <rect
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="1.0583333"
+       height="2.6458333"
+       x="16.404167"
+       y="25.929167" />
+    <rect
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="2.6458333"
+       height="1.0583333"
+       x="5.2916665"
+       y="16.404167" />
+    <rect
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="2.6458333"
+       height="1.0583333"
+       x="25.929167"
+       y="16.404167" />
+    
+    <!-- Clock Hands -->
+    <rect
+       style="fill:#F44336;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="1.0583333"
+       height="7.9375"
+       x="16.404167"
+       y="9.525" />
+    <rect
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.79375"
+       height="5.2916665"
+       x="16.536459"
+       y="11.641666"
+       transform="rotate(45,16.933332,16.933332)" />
+    
+    <!-- Center Dot -->
+    <circle
+       style="fill:#1565C0;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="1.3229166" />
+    
+    <!-- Productivity Bar -->
+    <path
+       style="fill:#4CAF50;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       d="m 8.4666665,21.166666 h 3.1749995 v 3.175 H 8.4666665 Z" />
+    <path
+       style="fill:#FFC107;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       d="m 12.7,21.166666 h 3.175 v 3.175 H 12.7 Z" />
+    <path
+       style="fill:#F44336;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       d="m 16.933333,21.166666 h 3.175 v 3.175 h -3.175 z" />
+    <path
+       style="fill:#9E9E9E;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       d="m 21.166666,21.166666 h 3.175 v 3.175 h -3.175 z" />
+  </g>
+</svg>`;
+      
+      // Create a Blob from the SVG content
+      const svgBlob = new Blob([svgContent], { type: 'image/svg+xml' });
+      const svgUrl = URL.createObjectURL(svgBlob);
+      
+      // Create an image element to load the SVG
+      const img = new Image();
+      img.onload = function() {
+        // Draw the image on each canvas with different sizes
+        drawAndSetupDownload(img, 'canvas16', 'download16', 16);
+        drawAndSetupDownload(img, 'canvas48', 'download48', 48);
+        drawAndSetupDownload(img, 'canvas128', 'download128', 128);
+        
+        document.getElementById('output').innerHTML = '<p>Icons generated successfully! Click the download links to save each icon.</p>';
+      };
+      
+      img.src = svgUrl;
+    });
+    
+    function drawAndSetupDownload(img, canvasId, downloadId, size) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      
+      // Clear canvas
+      ctx.clearRect(0, 0, size, size);
+      
+      // Draw image
+      ctx.drawImage(img, 0, 0, size, size);
+      
+      // Set up download link
+      const downloadLink = document.getElementById(downloadId);
+      downloadLink.href = canvas.toDataURL('image/png');
+    }
+  </script>
+</body>
+</html>

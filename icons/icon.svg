@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866666 33.866668"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F47A1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#34A853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E8E3E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Background Circle -->
+    <circle
+       style="fill:url(#gradient);fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="15.875" />
+
+    <!-- Clock Face -->
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="13.229167" />
+
+    <!-- Clock Ticks -->
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.79375"
+       height="2.1166666"
+       x="16.536459"
+       y="5.2916665" />
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.79375"
+       height="2.1166666"
+       x="16.536459"
+       y="26.458334" />
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="2.1166666"
+       height="0.79375"
+       x="5.2916665"
+       y="16.536459" />
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="2.1166666"
+       height="0.79375"
+       x="26.458334"
+       y="16.536459" />
+
+    <!-- Hour marks (smaller ticks) -->
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.52916664"
+       height="1.0583333"
+       x="11.1125"
+       y="6.3499999"
+       transform="rotate(-30,16.933332,16.933332)" />
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.52916664"
+       height="1.0583333"
+       x="22.225"
+       y="6.3499999"
+       transform="rotate(30,16.933332,16.933332)" />
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.52916664"
+       height="1.0583333"
+       x="6.3499999"
+       y="11.1125"
+       transform="rotate(-60,16.933332,16.933332)" />
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.52916664"
+       height="1.0583333"
+       x="26.458334"
+       y="11.1125"
+       transform="rotate(60,16.933332,16.933332)" />
+
+    <!-- Clock Hands -->
+    <!-- Hour hand -->
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.9260416"
+       height="5.2916665"
+       x="16.470312"
+       y="11.641666" />
+
+    <!-- Minute hand -->
+    <rect
+       style="fill:#E53935;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       width="0.6614583"
+       height="7.9375"
+       x="16.602604"
+       y="9.525" />
+
+    <!-- Center Dot -->
+    <circle
+       style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       cx="16.933332"
+       cy="16.933332"
+       r="1.0583333" />
+
+    <!-- Productivity Arrow -->
+    <path
+       style="fill:url(#progressGradient);fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round"
+       d="m 23.8125,10.583333 2.116667,-2.1166665 v 4.2333335 h -4.233334 z" />
+  </g>
+</svg>
